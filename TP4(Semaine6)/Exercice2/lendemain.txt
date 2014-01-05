@@ -1,0 +1,24 @@
+programme lendemain
+début
+	avec jour, mois, annee : entier
+		fonction dateValide (entier, entier, entier) retourne booléen
+		procédure calculLendemain ( ; entier, entier, entier)
+	
+	afficher "Entrer le jour: "
+	saisir jour
+	
+	afficher "Entrer le mois: "
+	saisir mois
+	
+	afficher "Entrer l'annee: "
+	saisir annee
+	
+	si (dateValide(jour, mois, annee)) alors
+		calculLendemain(jour, mois, annee)
+		afficher "Le jour suivant est le: ", jour, "/", mois, "/", annee	
+	sinon
+		afficher "La date n'est pas valide !"
+	fin si
+	
+	à la ligne
+fin lendemain				

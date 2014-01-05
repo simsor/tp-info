@@ -1,0 +1,77 @@
+procédure calculLendemain( ; jour : entier, mois : entier, annee : entier)
+début
+	avec jourapres, moisapres, anneeapres : entier
+	
+	si (jour < 28) alors
+		jourapres <- jour + 1
+		moisapres <- mois
+		anneeapres <- annee
+	sinon
+		si (jour < 30 et mois != 2) alors
+			jourapres <- jour + 1
+			moisapres <- mois
+			anneeapres <- annee
+		sinon
+			si (mois=1 ou mois=3 ou mois=5 ou mois=7 ou mois=8 ou mois=10 ou mois=12) alors
+				// Mois en 31 jours
+				si (jour = 31) alors
+					jourapres <- 1
+					si (mois=12) alors
+						moisapres <- 1
+						anneeapres <- annee + 1
+					sinon
+						moisapres <- mois + 1
+						anneeapres <- annee
+					fin si
+				sinon
+					jourapres <- jour + 1
+					moisapres <- mois
+					anneeapres <- annee
+				fin si
+			sinon
+				si (mois != 2) alors
+					// Mois en 30 jours (sauf février)
+					si (jour = 30) alors
+						jourapres <- 1
+						moisapres <- mois + 1
+						anneeapres <- annee
+					sinon
+						jourapres <- jour + 1
+						moisapres <- mois
+						anneeapres <- annee
+					fin si
+				sinon
+					// Février
+					si ((annee mod 4=0 et annee mod 100 != 0) ou (annee mod 400 = 0) ) alors
+						// Année bissextile (donc 29 jours)
+						si (jour = 29) alors
+							jourapres <- 1
+							moisapres <- mois + 1
+							anneeapres <- annee
+						sinon
+							jourapres <- jour + 1
+							moisapres <- mois
+							anneeapres <- annee
+					sinon
+						// L'année n'est pas bissextile
+						si (jour = 28) alors
+							jourapres <- 1
+							moisapres <- mois + 1
+							anneeapres <- annee
+						sinon
+							jourapres <- 1
+							moisapres <- mois + 1
+							anneeapres <- annee
+						fin si
+					fin si
+				fin si
+			fin si
+		fin si
+	fin si
+	
+	jour <- jourapres
+	mois <- moisapres
+	annee <- anneapres
+fin calculLendemain
+		
+		

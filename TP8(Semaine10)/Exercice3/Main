@@ -1,0 +1,82 @@
+Programme tab_moyenne
+Début
+    Avec    nbr_note[30] : entier
+            tab_note[30][6] : entier
+	    noms_eleves[30][6] : chaine
+            i, j, choix : entier
+            moyenne: réel
+            continuer : caractère
+            nbr_eleve: entier
+            procédure afficher_tableau(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+            procédure afficher_moyenne(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+            procédure afficher_moyenne_classe(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+            procédure controle_note( ; entier )
+	    procédure saisirNouveauNom(; tab_noms[30][6] : chaîne, n : entier)
+
+    i <- 0
+    nbr_eleve <- 0
+
+    Répéter
+        j <- 0
+        Afficher "Entrer l'élève numéro ", i + 1," : "
+        A la ligne
+	Afficher "Entrer son nom : "
+        saisirNouveauNom(noms_eleves, nbr_eleve)
+        
+        Répéter
+
+            Afficher "Entrer la note ", j + 1 , " de ", noms_eleves[i], " : "
+            Saisir tab_note[i][j]
+            controle_note ( tab_note[i][j] )
+            A la ligne
+            
+            // incrementera le nombre de note de note pour cet élève dans le tableau
+            j <- j + 1
+            nbr_note[i] <- j
+            
+            Afficher "Saisir une autre note? (o/n) : "
+            Saisir continuer
+            controle_yes_no( ; continuer )            
+	    A la ligne
+            
+        Tant que ( continuer = 'o' ) 
+        // Sort de la boucle s'il ne veut plus rentrer de notes pour l'élève
+        
+        i <- i + 1
+        
+        Afficher "Entre un autre élève ? (o/n) : "
+        Saisir continuer
+        controle_yes_no( ; continuer )
+        A la ligne
+        
+    Tant que ( continuer = 'o' ) // Sort de la boucle s'il ne veut plus rentrer d'élèves
+    
+    Répéter
+
+        Afficher "////// MENU \\\\\\"
+        A la ligne
+    
+        Afficher "1. Afficher le tableau complet de notes"
+        A la ligne 
+        Afficher "2. Afficher la moyenne d'une élève"
+        A la ligne
+        Afficher "3. Afficher la moyenne de la classe"
+        A la ligne
+        Afficher "4. Quitter"
+        A la ligne
+        
+        Afficher "Faite votre choix : "
+        saisir choix
+        A la ligne
+        
+        Selon choix faire
+            cas 1 : afficher_tableau(tab_note, noms_eleves, nbr_note, nbr_eleve)
+            cas 2 : afficher_moyenne(tab_note, noms_eleves, nbr_note, nbr_eleve)
+            cas 3 : afficher_moyenne_classe(tab_note, nbr_note, nbr_eleve)
+            cas 4 : RIEN
+            defaut : Afficher "Erreur de saisie."
+        fin faire
+        
+    Tant que ( choix != 4 ) // Sort de la boucle s'il a choisi de quitter
+    
+Fin tab_moyenne

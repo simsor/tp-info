@@ -1,0 +1,29 @@
+procedure parfaits (n: entier;)
+Début
+	Avec i ,j ,somme : entier
+	
+	somme <- 0
+	
+	Si (i<6) alors
+		Afficher "Il n'y a pas de nombre parfait entre 1 et ", n
+		A la ligne
+	
+	Sinon	
+		Pour i de 2 a n faire
+			Pour j de 1 a i-1 faire
+				si (i mod j=0)
+					Alors
+						somme <- somme+j
+				fin si
+			fin faire
+			si (somme=i) 
+				Alors
+					Afficher i
+					A la ligne
+			fin si
+			somme <- 0
+		fin faire
+	Fin si
+	
+fin parfaits	
+	

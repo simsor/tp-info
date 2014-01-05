@@ -1,0 +1,25 @@
+procédure afficher_moyenne( tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+Début
+    Avec    numero, i : entier
+            total : réel
+
+    Afficher "Entrez le numéro de l'élève : "
+    Saisir numero
+    Tant que ( numero > nbr_eleve) faire
+        Afficher "Erreur! Le numéro est supérieur au noubre d'eleve dans la base"
+        A la ligne
+        Afficher "Entrez le numéro de l'élève à nouveau : "
+        Saisir numero
+        A la ligne
+    fin faire
+    
+    total <- 0
+    
+    Pour i de 0 à nbr_note[numero] - 1 faire
+        total <- total + tab_note[numero - 1][i]
+    fin faire
+    
+    Afficher "La moyenne de l'eleve numero ", numero ," est : ", total / nbr_note[numero]
+    A la ligne
+    
+fin afficher_moyenne

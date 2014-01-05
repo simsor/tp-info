@@ -1,0 +1,15 @@
+Procédure saisirMotsMultiples (; mots[] : chaine, n : entier)
+Début
+	Avec continuer : car
+	
+	n <- 0
+	Répéter
+		Afficher "Saisir un mot : "
+		Saisir mots[n]
+		
+		n <- n+1
+		Afficher "Encore un mot ? (o/n) "
+		Saisir continuer
+	Tant que (continuer = 'o')
+
+Fin saisirMotsMultiples

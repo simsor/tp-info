@@ -1,0 +1,25 @@
+procédure dessineLigne (ligne : entier, hauteur : entier)
+début
+	avec i, base, espace, etoile : entier
+	// i: compteur de boucle
+	// base: nombre d'étoiles de la base
+	// espace: nombre d'espaces de chaque coté
+	// etoiles: nombre d'etoiles de la ligne
+	
+	base <- 2 * hauteur - 1
+	espace <- (base - (2*ligne-1)) / 2
+	etoile <- 2 * ligne - 1
+	
+	pour i de 1 à espace faire
+		afficher " "
+	fin faire
+	
+	pour i de 1 à etoile faire
+		afficher "*"
+	fin faire
+	
+	pour i de 1 à espace faire
+		afficher " "
+	fin faire
+	
+fin dessineLigne

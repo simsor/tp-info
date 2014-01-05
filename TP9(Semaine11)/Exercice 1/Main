@@ -1,0 +1,52 @@
+Programme Palindrome
+Début
+    Avec nom : chaine
+         choix : entier
+         procédure entrerMOT( ; chaine)
+         fonction nbre_voyelles( chaine ) retourne entier
+         fonction estPalindrome ( chaine ) retourne booléen
+         fonction majuscule( chaine ) retourne chaine
+
+         
+    
+    Repeter
+        
+        Afficher "1. Saisir un nom et afficher le nombre de voyelles."
+        A la ligne
+        Afficher "2. Saisir un nom et vérifier qu'il s'agit d'un palindrome."
+        A la ligne
+        Afficher "Saisir un nom, et mettre toutes les lettres en majuscules."
+        A la ligne
+        Afficher "4. Quitter"
+        
+        Saisir choix
+        Selon choix faire
+        
+            cas 1:  entrerMOT( ; nom )
+                    Afficher "Nombre de voyelles : ", nbr_voyelles( nom : chaine )
+            
+            cas 2:  entrerMOT( ; nom )
+
+                    Si ( estPalindrome( nom )) alors
+                        Afficher nom, "est un palindrome."
+                    Sinon
+                        Afficher nom, "n'est pas un palindrome."
+                    Fin si
+                   
+            cas 3:  entrerMOT( ; nom )
+                   
+                    Afficher "Le mot en majuscule : ", majuscule( nom )
+
+            cas 4:  RIEN
+
+            defaut: Afficher "Mauvaise entrée."
+            
+        Fin faire
+
+        
+    Tant que ( choix != 4 )
+    
+    Afficher "Au revoir..."
+    A la ligne
+    
+Fin Palindrome

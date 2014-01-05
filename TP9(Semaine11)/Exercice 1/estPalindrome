@@ -1,0 +1,24 @@
+fonction estPalindrome( mot : chaine ) retourne booléen
+Début
+    Avec    i : entier
+            palin : booléen
+            oppose : entier
+            
+    palin <- vrai
+    i <- 0
+    
+    Tant que ( palin et i < (longueur(mot) - 1 - i)) faire
+    
+        oppose <- longueur(mot) - 1 -i
+        
+        Si (mot[i] != mot[oppose]) alors
+            palin <- faux
+        Fin si
+        
+        i <- i + 1
+        
+    Fin faire
+    
+    retourne palin
+    
+Fin estPalindrome

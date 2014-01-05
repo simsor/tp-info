@@ -1,0 +1,46 @@
+Programme devinette
+Début
+	Avec borne, nbr, choix, score: entier
+				 procedure controle_borne(;borne : entier)
+				 procedure controle_choix(n ; choix : entier)
+				 procedure comparaison( choix : entier , nbr : entier)
+	
+	Afficher "Entrer la borne supérieur :"
+	Saisir borne
+	A la ligne
+
+	controle_borne(;borne)
+
+	choix <- 0
+	score <- 0
+
+	Repeter 
+
+		nbr <- borne*random()
+		Afficher "J'ai choisi un nombre entre 1 et ", borne ,"... a vous de le deviner."
+		A la ligne
+
+		Repeter
+			score <- score + 1
+			Afficher "Essai numéro ",score," (entrer un nombre) : "
+			Saisir choix
+
+			procedure controle_choix(borne ; choix)
+
+			procedure comparaison(choix, nombre)
+
+		Tant que choix != nbr ou choix >= 0 
+
+		Si choix >= 0 alors
+			Afficher "Vous avez gagné (score:", score ," essais), le nombre choisi était bien ", borne ," !"
+			A la ligne
+			choix <- 0
+			score <- 0
+		Fin si
+
+	Tant que choix >= 0
+
+	Afficher "Plus envie de jouer... a bientot."
+	A la ligne
+
+Fin devinette

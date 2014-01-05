@@ -1,0 +1,30 @@
+//////////////////////////////
+//  Fonction calculant le jour de la semaine
+//  correspondant à la date passée en paramètre
+//  Entrée: trois nombres correspondant à la date
+//  Sortie: le jour de la semaine (de 0 à 6)
+//////////////////////////////
+
+fonction JourSemaine (jour : entier, mois : entier, annee : entier) retourne entier
+début
+	
+	avec jour_semaine : entier
+	     jour_actuel, mois_actuel, annee_actuelle : entier
+	     procédure calculLendemain(; jour : entier, mois : entier, annee : entier)
+
+	jour_semaine <- 5
+	jour_actuel <- 1
+	mois_actuel <- 1
+	annee_actuelle <- 2000 // On initialise au 1er janvier 2000
+
+	tant que (jour_actuel != jour et mois_atuel != mois et annee_actuelle != annee)
+	     calculLendemain(; jour_actuel, mois_actuel, annee_actuelle)
+	     selon jour_semaine faire
+	     	   cas 6: jour_semaine <- 0
+		   defaut: jour_semaine <- jour_semaine + 1
+	     fin faire
+	fin faire
+
+	retourner jour_semaine
+fin JourSemaine
+	

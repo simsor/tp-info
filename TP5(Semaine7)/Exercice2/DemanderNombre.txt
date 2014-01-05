@@ -1,0 +1,25 @@
+procédure DemanderNombre (choisi : entier, coups : entier ; n : entier)
+début
+	avec fonction SaisirEntierBorne(max : entier)
+	
+	afficher "Entrer un nombre entre 0 et 100: "
+	n <- SaisirEntierBorne(100)
+
+	si ( n = choisi)
+	   alors
+		afficher "Bravo, vous avez trouvé le nombre en ", coups, " coups !"
+		à la ligne
+		choisi <- random() * 100
+		afficher "J'ai choisi un autre nombre, rejouons ! (-1 pour arreter)"
+		à la ligne
+	   sinon
+		si (n < choisi)
+		   alors 
+		   	 afficher "C'est moins !"
+			 à la ligne
+		   sinon
+			afficher "C'est plus !"
+			à la ligne
+		fin si
+	fin si
+fin DemanderNombre

@@ -1,0 +1,45 @@
+Programme calculatrice
+Debut
+	Avec nb1, nb2 : réel
+		operateur : caractere
+		
+	Afficher "Entrer l'operateur: "
+	Saisir operateur
+	A la ligne
+	
+	Tant que (operateur != '+' et operateur!= '-' et operateur != '*' et operateur != '/') faire
+		Afficher "Entrer un operateur ( +, -, * ou /): "
+		Saisir operateur
+		A la ligne
+	fin faire
+	
+	Afficher "Entrer le premier operande: "
+	Saisir nb1
+	A la ligne
+	
+	Afficher "Entrer le deuxieme operande: "
+	Saisir nb2
+	A la ligne
+	
+	Selon operateur faire:
+		cas '+': Afficher nb1, "+" ,nb2, "=",nb1+nb2
+		cas'-': Afficher nb1, "-" ,nb2, "=",nb1-nb2
+		cas '*': Afficher nb1, "*" ,nb2, "=",nb1*nb2
+		cas '/': Si (nb2=0)
+					Alors
+						Répéter
+							Afficher "Le deuxième opérande ne peut pas etre égal à zéro"
+							A la ligne
+							Afficher "Entrer le deuxieme operande: "
+							Saisir nb2
+							A la ligne
+						Tant que (nb2=0)
+						Afficher nb1, "/" ,nb2, "=",nb1/nb2
+					Sinon
+						Afficher nb1, "/" ,nb2, "=",nb1/nb2
+				Fin si
+	Fin faire
+	
+	A la ligne
+	
+Fin calculatrice	

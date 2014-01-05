@@ -1,0 +1,60 @@
+programme date
+début
+	avec jour, mois, annee : entier
+		 coherente: booléen
+	
+	coherente <- vrai
+	afficher "Saisir le jour: "
+	saisir jour
+	à la ligne
+	
+	afficher "Saisir le mois: "
+	saisir mois
+	à la ligne
+	
+	afficher "Saisir l'annee: "
+	saisir annee
+	à la ligne
+	
+	si (mois < 1 ou mois > 12 ou jour < 1 ou jour > 31) alors
+		// Tests généraux vis-à-vis des jours et des mois 
+		coherente <- faux
+	sinon
+		si (mois=4 ou mois=6 ou mois=9 ou mois=11) alors
+			// Mois de 30 jours
+			si (jour > 30) alors
+				coherente <- faux
+			fin si
+		sinon
+			si (mois=2) alors
+				// Février
+				si ((annee mod 4=0 et annee mod 100 != 0) ou (annee mod 400 = 0) ) alors 
+					// Année bissextile
+					si (annee < 1582) alors
+						Afficher "La notion d'annee bissextile du calendrier gregorien n'a ete adoptee qu'en 1582. Cette notion n'est donc pas vraiment juste pour les annees precedentes."
+						si (jour > 28) alors
+							coherente <- faux
+						fin si
+					sinon
+						si (jour > 29) alors
+							coherente <- faux
+						fin si
+					fin si
+				sinon
+					si (jour > 28) alors
+						coherente <- faux
+					fin si
+				fin si
+			fin si
+		fin si
+	fin si
+	
+	si (coherente) alors 
+		afficher "La date est cohérente"
+	sinon
+		afficher "La date n'est pas cohérente"
+	fin si
+	à la ligne
+fin date 
+			
+	

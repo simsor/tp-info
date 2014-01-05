@@ -1,0 +1,38 @@
+programme date
+	  avec jour, mois, annee : entier
+	       num_jour : entier
+	       fonction DateValide(entier, entier, entier) retourne booléen
+	       fonction JourSemaine(entier, entier, entier) retourne entier
+	       procédure SaisirEntierMinMax(min : entier, max : entier ; retour : entier)
+	       procédure SaisirEntierMin(min : entier ; retour : entier)
+
+	  Afficher "Entrer le jour: "
+	  SaisirEntierMinMax(1, 31 ; jour)
+
+	  Afficher "Entrer le mois: "
+	  SaisirEntierMinMax(1, 12 ; mois)
+	  
+	  Afficher "Entrer l'année: "
+	  SaisirEntierMin(2000 ; annee)
+
+	  si ( DateValide(jour, mois, annee) ) alors
+	     num_jour <- JourSemaine(jours, mois, annee)
+	     Afficher "Le ", jour, "/", mois, "/", annee, " est un "
+
+	     selon num_jour faire
+	     	   cas 0: afficher "lundi"
+		   cas 1: afficher "mardi"
+		   cas 2: afficher "mercredi"
+		   cas 3: afficher "jeudi"
+		   cas 4: afficher "vendredi"
+		   cas 5: afficher "samedi"
+		   cas 6: afficher "dimanche"
+	     fin faire
+ 	     
+	     Afficher " (jour ", num_jour, ")"
+	 sinon
+		afficher "La date n'est pas valide !"
+	 fin si
+
+	 à la ligne
+fin date

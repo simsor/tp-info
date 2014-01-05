@@ -1,0 +1,17 @@
+programme Carre
+Debut
+	Avec n: entier
+		 procedure controle( n : entier)
+		 procedure DessineCarre( n : entier)
+	
+	Afficher "Entre la valeur de n: "
+	Saisir n
+	A la ligne
+	
+	controle(n)
+
+	DessineCarre( n )
+	
+Fin Carre
+				
+		

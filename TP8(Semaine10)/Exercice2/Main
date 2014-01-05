@@ -1,0 +1,72 @@
+Programme tab_moyenne
+Début
+    Avec    nbr_note[30] : entier
+            tab_note[30][6] : entier
+            i, j, choix : entier
+            moyenne: réel
+            continuer : caractère
+            nbr_eleve: entier
+            procédure afficher_tableau(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+            procédure afficher_moyenne(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+            procédure afficher_moyenne_classe(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+
+    i <- 0
+    nbr_eleve <- 0
+
+    Répéter
+        j <- 0
+        Afficher "Entrer l'élève numéro ", i + 1," : "
+        A la ligne
+        
+        nbr_eleve <- nbr_eleve + 1
+        
+        Répéter
+
+            Afficher "Entrer la note ", j + 1 , " de l'élève : "
+            Saisir tab_note[i][j]
+            A la ligne
+            
+            j <- j + 1
+            
+            nbr_note[i] <- j
+            
+            Afficher "Saisir une autre note? (o/n) : "
+            Saisir autre_note
+            controle_yes_no( ; autre_note )
+            A la ligne
+            
+        Tant que ( continuer = 'o' )
+        
+        i <- i + 1
+        
+        Afficher "Entre un autre élève ? (o/n) : "
+        Saisir autre_eleve
+        controle_yes_no( ; autre_eleve )
+        A la ligne
+        
+    Tant que ( continuer = 'o' )
+    
+    Répéter
+
+        Afficher "////// MENU \\\\\\"
+        A la ligne
+    
+        Afficher "1. Afficher le tableau complet de notes"
+        A la ligne 
+        Afficher "2. Afficher la moyenne d'une élève"
+        A la ligne
+        Afficher "3. Afficher la moyenne de la classe"
+        A la ligne
+        Afficher "4. Quitter"
+        
+        Selon choix faire
+            cas 1 : afficher_tableau(tab_note , nbr_note, nbr_eleve)
+            cas 2 : afficher_moyenne(tab_note, nbr_note, nbr_eleve)
+            cas 3 : afficher_moyenne_classe(tab_note, nbr_note, nbr_eleve)
+            cas 4 : RIEN
+            defaut : Afficher "Erreur de saisi."
+        fin faire
+        
+    Tant que ( choix != 4 )
+    
+Fin tab_moyenne

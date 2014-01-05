@@ -1,0 +1,21 @@
+Fonction estPalindrome (mot: chaine) retourne booléen
+Début
+	Avec i : entier // Compteur de boucle
+	     oppose : entier
+	     palin : booléen
+	     
+	palin <- vrai
+	i <- 0
+	Tant que (palin et i < longueur(mot) - 1 - i ) Faire
+	     // Quand i = oppose ou i > oppose, on arrête : ca signifie qu'on est arrivé au milieu
+
+	     oppose <- longueur(mot) - 1 - i
+	     Si (mot[i] != mot[oppose]) Alors
+	     	palin <- faux
+	     Fin Si
+	     
+	     i <- i + 1
+	Fin faire
+
+	retourner palin
+Fin estPalindrome

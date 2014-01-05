@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de comparer de nombres		   
+//  Entrée: les deux nombres à comparer			   
+//  Sortie: RIEN								   
+/////////////////////////////////////////////////////
+
+procedure comparaison( nbr1 : entier , nbr2 : entier)
+Debut
+
+	Si nbr1 > nbr2 alors
+		Afficher "Le nombre choisi est plus petit !"
+		A la ligne
+	Sinon
+		Si nbr1 < nbr2 alors 
+			Si nbr => 0
+				Afficher "Le nombre choisi est plus grand !"
+				A la ligne
+			Fin si
+		Fin si
+	Fin si
+
+Fin comparaison

@@ -1,0 +1,29 @@
+/////////////////////////////////////////////////
+// Fonction retournant le nombre de voyelles de la 
+// chaîne passée en paramètre.
+// Entrée : La chaîne
+// Sortie : le nombre de voyelles
+/////////////////////////////////////////////////
+
+Fonction nombreVoyelles (mot : chaine) retourne entier
+Début
+	Avec nbr : entier // Stocke le nombre de voyelles
+	     i, j : entier // Compteur de boucle
+	     voyelles : chaine
+
+	voyelles <- "aeiouyAEIOUY"
+	nbr <- 0
+
+	Pour i de 0 à longueur(mot) - 1 faire
+	     Pour j de 0 à 13 faire
+	     	  Si mot[i] = voyelles[j] Alors
+		     nbr <- nbr + 1
+		  Fin si
+	     Fin faire
+	Fin faire
+
+	retourner nbr
+Fin nombreVoyelles
+		     
+
+	

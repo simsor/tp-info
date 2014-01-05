@@ -1,0 +1,58 @@
+Programme ChainesMultiples
+Début
+	Avec noms[100] : chaîne
+	     choix, n : entier
+	     fonction nombreVoyelles(mot : chaine) retourne entier
+	     fonction estPalindrome(mot : chaine) retourne booléen
+	     fonction forcerMajuscules(mot : chaine) retourne chaine
+	     procédure saisirMotsMultiples(; mots[] : chaine, n : entier)
+
+	
+	choix <- 0
+	n <- 0
+	répéter
+		Afficher "1. Saisir un tableau de mots."
+		A la ligne
+		Afficher "2. Afficher le nombre de voyelles de chaque mot"
+		A la ligne
+		Afficher "3. Vérifier si chaque mot est un palindrome"
+		A la ligne
+		Afficher "4. Mettre toutes les lettres de chaque mot en majuscules"
+		A la ligne
+		Afficher "5. Quitter"
+		A la ligne
+	
+		Afficher "Votre choix : "		
+		Saisir choix
+		Selon choix faire
+		      cas 1: saisirMotsMultiples(; noms, n)
+		      
+		      cas 2: Pour i de 0 à n-1 faire
+		      	     	  Afficher "Nombre de voyelles de ", noms[i], " : ", nombreVoyelles(noms[i])
+				  A la ligne
+			     Fin faire
+
+		      cas 3: Pour i de 0 à n-1 faire
+		      	     	  Afficher "Le mot ", noms[i], " "
+				  Si (estPalindrome(noms[i])) faire
+				     	Afficher "est un palindrome."
+				  Sinon
+					Afficher "n'est pas un palindrome."
+				  Fin Si
+				  A la ligne
+			     Fin Faire
+
+		      cas 4: Pour i de 0 à n-1 faire
+		      	     	  Afficher noms[i], " en majuscules : ", forcerMajuscules(noms[i])
+				  A la ligne
+			     Fin faire
+
+		      cas 5: Rien
+		      défaut: Afficher "Mauvaise entrée."
+		Fin faire
+
+		A la ligne
+
+	Tant que (choix != 4)
+	
+Fin ChainesMultiples

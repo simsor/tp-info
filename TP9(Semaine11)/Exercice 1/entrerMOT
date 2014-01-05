@@ -1,0 +1,10 @@
+procédure entrerMOT( ; mot : chaine )
+Début
+
+    Afficher "Entrez un mot : "
+    Saisir mot
+    A la ligne
+    
+Fin entrerMOT
+
+    

@@ -1,0 +1,14 @@
+/////////////////////////////////////
+//  Procédure permettant de saisir un entier compris entre un minimum
+//  et un maximum
+//  Entrée: le minimum et le maximum
+//  Sortie: L'entier saisi, minimum < n < maximum
+/////////////////////////////////////
+
+procédure SaisirEntierMinMax(min : entier, max : entier ; retour : entier)
+début
+	répéter
+		saisir retour
+	tant que (retour < min ou retour > max)
+
+fin SaisirEntierMinMax

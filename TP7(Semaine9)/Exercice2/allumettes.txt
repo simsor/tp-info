@@ -1,0 +1,40 @@
+Programme allumettes
+Début
+	Avec nb_allumettes, tour : entier
+	     procédure Joueur_TirerAllumette( ; allu : entier)
+	     procédure Ordi_TirerAllumette  ( ; allu : entier)
+	     procédure Controler ( ; nombre : entier)
+	
+	Afficher "=====  Jeu des allumettes  ====="
+	A la ligne
+	
+	Afficher "Nombre d'allumettes ? (-1 pour aléatoire) : "
+	Saisir nb_allumettes
+	Controler( ; nb_allumettes)
+	
+	tour <- 0 // 0 = Joueur   et   1 = Ordi
+	Tant que ( nb_allumettes > 0 ) faire
+	     Afficher "Il reste ", nb_allumettes, " allumettes."
+	     A la ligne
+	     Afficher "Tour "
+	     Selon tour faire
+	     	   cas 0: Afficher "du Joueur"
+		       	  A la ligne
+			  Joueur_TirerAllumette( ; nb_allumettes)
+			  tour = 1
+		   cas 1: Afficher "de l'Ordinateur"
+		       	  A la ligne
+			  Ordi_TirerAllumette( ; nb_allumettes)
+			  tour = 0
+	     Fin faire
+	     A la ligne
+	Fin faire
+
+	Afficher "Vainqueur : "
+	Selon tour faire
+	      cas 0: Afficher "vous"
+	      cas 1: Afficher "l'Ordinateur"
+	Fin faire
+
+	A la ligne
+Fin allumettes

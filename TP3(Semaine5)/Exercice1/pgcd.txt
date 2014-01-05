@@ -1,0 +1,43 @@
+Programme PGCD
+Début
+	Avec a, b : entier
+	
+	Afficher "PGCD(a, b)"
+	A la ligne
+	Afficher "Entrer a: "
+	Saisir a
+	A la ligne
+	Tant que ( a < 0) faire
+		Afficher "Erreur: a doit etre superieur a 0."
+		A la ligne
+		Afficher "Entrer a:"
+		Saisir a
+		A la ligne
+	fin faire
+	
+	
+	Afficher "Entrer b: "
+	Saisir b
+	A la ligne
+	Tant que ( b < 0) faire
+		Afficher "Erreur: b doit etre superieur a 0."
+		A la ligne
+		Afficher "Entrer b:"
+		Saisir b
+		A la ligne
+	fin faire
+	
+	Tant que (a != b) faire
+		Si (a > b) alors
+			a <- a - b
+		Sinon
+			b <- b - a
+		Fin si
+	Fin faire
+	
+	Afficher "PGCD(a, b) = ", a
+	A la ligne
+Fin PGCD 
+	
+	
+	

@@ -1,0 +1,25 @@
+//////////////////////////////////////////////////
+// Procédure demandant au joueur de tirer des allumettes
+// ENTREE: le nombre d'allumettes restantes
+// SORTIE: le nombre d'allumettes après tirage.
+// Le nombre d'allumettes tirées par le joueur est vérifié.
+//////////////////////////////////////////////////
+
+Procédure Joueur_TirerAllumette( ; allu : entier )
+Début
+	Avec tirer : entier
+
+	Afficher "Tirer combien d'allumette(s) ? (de 1 à 3) : "
+	Saisir tirer
+
+	Tant que ( tirer < 1 ou tirer > 3 ou (allu - tirer) < 0) Alors
+	     Afficher "Erreur de saisie."
+	     A la ligne
+	     Afficher "Re-saisir : "
+	     Saisir tirer
+	Fin faire
+
+	Afficher "Vous tirez ", tirer, " allumettes."
+	A la ligne
+	allu = allu - tirer
+Fin Joueur_TirerAllumette

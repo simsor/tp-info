@@ -1,0 +1,16 @@
+fonction majuscule( mot : chaine) retourne chaine
+Début
+    Avec    i : entier
+
+        
+        Pour i de 0 à longueur(mot) - 1 faire
+
+            Si (mot[i] >= 'a' et mot[i] <= 'z') alors
+                mot[i] <- mot[i] - 32
+            Fin si
+
+        Fin faire
+        
+        retourne mot
+        
+Fin majuscule

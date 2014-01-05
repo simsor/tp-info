@@ -1,0 +1,20 @@
+/////////////////////////////////////////
+//	Procedure qui controle la saisi de
+//  l'utilisateur
+//
+//	Entree: le nombre n entre par 
+//	l'utilisateur
+//	Sortie: RIEN
+/////////////////////////////////////////
+
+
+procédure controle(; n : entier)
+début
+	tant que ( n <= 0 ) faire
+		afficher "Erreur: n doit etre superieur a 0"
+		à la ligne
+		afficher "Saisir n a nouveau: "
+		saisir n
+		à la ligne
+	fin faire
+fin controle

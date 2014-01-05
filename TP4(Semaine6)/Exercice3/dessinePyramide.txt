@@ -1,0 +1,11 @@
+procédure dessinePyramide ( hauteur : entier )
+début
+	avec i : entier // Compteur de boucle
+		procédure dessineLigne(entier, entier)
+	
+	pour i de 1 à hauteur faire
+		dessineLigne(i, hauteur)
+		à la ligne
+	fin faire
+	
+fin dessinePyramide

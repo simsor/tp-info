@@ -1,0 +1,17 @@
+programme Affparfait
+Debut
+	Avec n : entier
+		 procedure parfaits(n : entier;)
+		 procedure controler(;n : entier)
+		 
+	Afficher "Entrer n : "
+	Saisir n
+	
+	controler(;n)
+	
+	Afficher "Liste des nombres parfaits entre 1 et ", n
+	A la ligne
+	
+	parfaits(n;)
+	
+Fin Affparfait

@@ -1,0 +1,52 @@
+/////////////////////////////////////////
+//	Procedure qui dessine le carre ligne
+//	par ligne
+//
+//	Entree: le nombre n entre par 
+//	l'utilisateur
+//	Sortie: RIEN
+/////////////////////////////////////////
+
+
+procedure DessineCarre( n : entier )
+Debut
+	Avec cote , i: entier
+		 nombre, nombre_max, nombre_milieu: entier
+		 milieu : booléen
+		 procedure DessineLigne( maximum : entier, milieu : entier ; decompte : entier )
+		 
+		cote <- 2 * n + 1
+		nombre <- 2 * n
+		nombre_max <- nombre 
+		milieu <- faux
+		nombre_milieu <- n
+		
+		Pour i de 1 a cote faire
+			
+			DessineLigne( nombre_max, nombre_milieu; nombre)
+			
+			Si (nombre_max > n et non milieu) alors
+				
+				nombre_max <- nombre_max - 1
+				nombre_milieu <- nombre_milieu - 1
+				nombre <- nombre - 1
+				
+			Sinon
+				Si (nombre_max > n et milieu) alors
+					
+					nombre_max <- nombre_max + 1
+					nombre_milieu <- nombre_milieu + 1
+					nombre <- nombre + 1
+				
+				Sinon
+				
+					milieu <- Vrai
+					nombre_max <- nombre_max + 1
+					nombre_milieu <- nombre_milieu + 1
+					nombre <- nombre + 1
+					
+				Fin si
+			Fin si
+		Fin faire
+		
+Fin DessineCarre  

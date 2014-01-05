@@ -1,0 +1,22 @@
+procédure afficher_moyenne_classe(tab_note[30][6] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+Début
+    Avec  total_classe, total : réel
+          i, j : entier
+    
+    Pour i de 0 à nbr_eleve - 1 faire
+        Pour j de 0 à nbr_note[i] - 1 faire
+            total <- total + tab_note[i][j]
+        fin faire
+        
+        total_classe <- total_classe + total
+        
+        total <- 0
+    
+    fin faire
+    
+    Afficher "Moyenne de la classe : ", total_classe / nbr_eleve
+    
+fin afficher_moyenne_classe
+        
+
+        

@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de controller que la      
+//  valeur n entrée n'est pas inférieur à une
+//  certaine borne                         
+//  Entrée: le nombre n entréet la borne_inf deja
+//  défini                 
+//  Sortie: un nombre valide (supérieur à borne_inf)                                                          
+/////////////////////////////////////////////////////
+
+
+procedure controle_borneinf(borne_inf : entier ;n : entier)	
+Début
+
+	Tant que ( borne_inf >= n) faire
+		Afficher "Erreur, votre nombre choisi ne doit pas etre inferieur a " , borne_inf + 1 , "."
+		A la ligne
+		Afficher "Entrer votre essai a nouveau : "
+		Saisir n
+		A la ligne
+	fin faire
+	
+Fin contrôle_borneinf

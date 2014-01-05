@@ -1,0 +1,12 @@
+/////////////////////////////////////
+//  Procédure permettant de saisir un entier supérieur à un minimum
+//  Entrée: le minimum
+//  Sortie: L'entier saisi, > minimum
+/////////////////////////////////////
+
+procédure SaisirEntierMin(min : entier ; retour : entier)
+début
+	répéter
+		saisir retour
+	tant que (retour < min)
+fin SaisirEntierMin

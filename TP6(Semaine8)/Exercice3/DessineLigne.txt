@@ -1,0 +1,37 @@
+/////////////////////////////////////////
+//	Procedure qui dessine une ligne du 
+//  carre en fonction de ses parametres
+//
+//	Entree: le maximum a atteindre et 
+//	le nombre centrale de la ligne
+//	Sortie: Decompte est changé
+/////////////////////////////////////////
+
+
+procédure DessineLigne (maximum : entier, centre : entier ; decompte : entier)
+début
+	tant que (decompte > centre) faire
+		afficher decompte, " "
+		
+		Si (decompte<10) alors
+			Afficher " "
+		Fin si
+		
+		decompte = decompte - 1
+	fin faire
+	afficher decompte, " "
+	
+	Si (decompte<10) alors
+		Afficher " "
+	Fin si
+	
+	tant que (decompte < maximum) faire
+		decompte = decompte + 1
+		afficher decompte, " "
+		
+		Si (decompte<10) alors
+			Afficher " "
+		Fin si
+		
+	fin faire
+fin DessineLigne

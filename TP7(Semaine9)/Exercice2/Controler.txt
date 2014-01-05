@@ -1,0 +1,22 @@
+/////////////////////////////////////////
+// Procédure contrôlant la saisie du nombre d'allumettes
+// ENTREE: Le nombre entré par l'utilisateur
+// SORTIE: Si -1: un nombre aléatoire entre 4 et 30
+//         Si <0: on redemande une saisie
+//         Sinon: nombre n'est pas modifié
+/////////////////////////////////////////
+
+Procédure Controler ( ; nombre : entier)
+Début
+	Si ( nombre = -1) Alors
+	   nombre = random() * 26 + 4 // On veut entre 4 et 30 allumettes
+	Sinon
+		Si ( nombre <= 0)
+		   Afficher "Erreur de saisie."
+		   A la ligne
+		   Afficher "Re-saisir : "
+		   Saisir nombre
+		   Controler (; nombre)
+		Fin si
+	Fin si
+Fin Controler

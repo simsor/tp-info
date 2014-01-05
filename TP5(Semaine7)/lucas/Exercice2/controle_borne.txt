@@ -1,0 +1,19 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de controller que la      
+//	valeur n entrée est supérieur à 1			   
+//  Entrée: le nombre n entré				   
+//  Sortie: RIEN								   
+/////////////////////////////////////////////////////
+
+procedure controler_borne(;borne : entier)	
+Début
+
+	Tant que (n<2) faire
+		Afficher "Erreur n doit etre supérieur a 1."
+		A la ligne
+		Afficher "Entrer n a nouveau : "
+		Saisir n
+		A la ligne
+	fin faire
+	
+Fin controler

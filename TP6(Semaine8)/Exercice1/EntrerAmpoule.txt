@@ -1,0 +1,29 @@
+/////////////////////////////////////////
+//	Procedure qui permet de saisir et
+//	verifier le nombre d'ampoules
+//
+//	Entree: RIEN
+//	Sortie: le nombre entré et vérifié
+/////////////////////////////////////////
+
+
+fonction EntrerAmpoule() retourne entier
+Debut
+	Avec nombre : entier
+	
+	Repeter
+		Afficher "Entrer un multiple de 10:"
+		Saisir nombre
+		A la ligne
+		
+		Si ((nombre mod 10) = 0) Alors
+			retourne nombre
+		Sinon 
+			Afficher "Erreur: Le nombre entré n'est pas multiple de 10."
+		Fin si
+		
+		A la ligne
+	Tant que 1=1
+	
+Fin EntrerAmpoule
+	

@@ -1,0 +1,38 @@
+/////////////////////////////////////////
+//	Procedure qui affiche le Menu du 
+//	programme
+//
+//	Entree: la requete de l'utilisateur
+//  et le nombre d'ampoules
+//	Sortie: la requete choisi et le 
+//	nombre d'ampoules spécifié
+/////////////////////////////////////////
+
+
+Procedure Afficher_Menu(; requete : entier)
+Debut
+	Avec ampoule : entier
+		 procedure CalculBoite(ampoule;)
+		 fonction EntrerAmpoule() retourne entier
+		 
+	Afficher "1 - Entrer le nombre d'ampoules"
+	A la ligne
+	Afficher "2 - Calculer et afficher les emballages"
+	A la ligne
+	Afficher "3 - Quitter"
+	A la ligne
+	
+	Afficher "Votre choix:"
+	Saisir requete
+	
+	Selon requete faire
+		cas 1: ampoule <- EntrerAmpoule()
+		cas 2: CalculBoite(ampoule;)
+		cas 3: RIEN
+		defaut: Afficher "Mauvaise saisi."
+	Fin faire
+	
+	A la ligne
+	
+	Fin Afficher_Menu 
+		

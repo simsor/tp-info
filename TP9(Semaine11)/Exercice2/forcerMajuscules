@@ -1,0 +1,15 @@
+Fonction forcerMajuscules ( mot : chaine ) retourne chaine
+Début
+	Avec i : entier // Compteur de boucle
+	     minMaj : entier
+
+	minMaj <- 'A' - 'a'
+	
+	Pour i de 0 à longueur(mot) - 1 Faire
+	     Si (mot[i] >= 'a' et mot[i] <= 'z') Alors
+	     	mot[i] <- mot[i] + minMaj
+	    Fin Si
+        Fin faire
+
+	retourner mot
+Fin forcerMajuscules

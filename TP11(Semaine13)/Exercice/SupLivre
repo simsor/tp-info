@@ -1,0 +1,90 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de supprimer un livre
+//  de la bibliothèque
+//  Entrée: La bibliothèque
+//  Sortie: La bibliothèque modifié
+/////////////////////////////////////////////////////
+
+
+Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                                }
+
+procédure SupLivre(; bibliotheque : t_biblio)
+Début
+    Avec    i, j : entier
+            selection : chaine
+            confirmation : caractere
+            trouve : booléen
+            procédure controle_yes_no( ; confirmation : caractère )
+            
+    trouve <- faux
+    i <- 0
+            
+    Si bibliotheque.nbrLivres = 0 alors
+
+        Afficher "Il n'y a pas encore de livres dans la bibliothèque..."
+        A la ligne
+        Afficher "Merci d'en ajouter."
+
+    Sinon
+
+        Afficher "Quel livre voulez vous supprimer ? (Titre) : "
+        Saisir selection
+    
+        Repeter
+            Si (bibliotheque.livre[i].titre = selection) alors
+                Afficher "Le livre a ete trouve."
+                A la ligne
+                trouve <- vrai
+
+                Afficher "Confirmer la suppression ? (o/n) : "
+                Saisir confirmation
+                controle_yes_no( ; confirmation )
+            
+                Si (confirmation = 'o') alors
+                    bibliotheque.livre[i].titre <- livre[bibliotheque.nbrLivres - 1].titre
+                    bibliotheque.livre[i].auteur <- livre[bibliotheque.nbrLivres - 1].auteur
+                    bibliotheque.livre[i].parution <- livre[bibliotheque.nbrLivres - 1].parution
+                    bibliotheque.livre[i].nbrPages <- livre[bibliotheque.nbrLivres - 1].nbrPages
+                
+                    bibliotheque.nbrLivres <- bibliotheque.nbrLivres - 1
+                
+                    Afficher "Livre bien supprimé!"
+                    A la ligne
+             
+                Sinon
+                    RIEN
+                Fin si
+
+            Sinon
+
+                i <- i + 1
+            
+            Fin si
+        
+        Tant que i < bibliotheque.nbrLivres ou trouve = faux
+
+    
+        Si trouve alors
+            RIEN
+        Sinon
+            Afficher "Aucun livre avec ce nom dans la bibliothèque..."
+        Fin si
+        
+    Fin si
+    
+Fin SupLivre
+    
+    
+    

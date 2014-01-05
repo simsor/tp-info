@@ -1,0 +1,16 @@
+Programme Emballage
+Debut
+	Avec choix : entier
+		 procedure Afficher_Menu(; requete : entier, ampoule : entier)
+	
+	ampoule <- 1
+	
+	Repeter 
+		Afficher "--------Menu-------"
+		A la ligne
+		Afficher_Menu(; choix)
+	Tant que (choix != 3)
+	A la ligne
+
+Fin Emballage
+		

@@ -1,0 +1,84 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant d'ajouter un livre à
+//  la bibliothèque
+//  Entrée: La bibliothèque
+//  Sortie: La bibliothèque modifié
+/////////////////////////////////////////////////////
+
+
+Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                                }
+
+
+procédure AjouterLivre(; bibliotheque : t_biblio)
+Début
+    Avec    nvTitre , nvAuteur : chaine
+            nvParution , nvPages : entier
+            confirmation, more : caractere
+            procédure controle_bornesup( entier ; entier )
+            procédure controle_borneinf( entier ; entier )
+            procédure controle_yes_no( ; caractère )
+
+            
+    Si (bibliotheque.nbrLivres >= 500) alors
+
+        Afficher "Plus de place dans la bibliothèque... Il faut supprimer des livres."
+        
+    Sinon
+    
+        Repeter
+            
+            Afficher "Entrer le titre du nouveau livre : "
+            Saisir nvTitre
+            A la ligne
+
+            Afficher "Entrer son auteur : "
+            Saisir nvAuteur
+            A la ligne
+    
+            Afficher "Entrer son annee de parution : "
+            Saisir nvParution
+            controle_bornesup( 2013 ; nvPages )
+    
+            Afficher "Enter son nombre de pages : "
+            Saisir nvPages
+            controle_borneinf( 0 ; nvPages )
+        
+            Afficher "Voulez vous vraiment ajouter ce livre ? (o/n) : "
+            Saisir confirmation
+            controle_yes_no( ; confirmation )
+        
+            Si (confirmation = 'o') alors
+
+                bibliotheque.livre[nbrLivres].titre <- nvTitre
+                bibliotheque.livre[nbrLivres].auteur <- nvAuteur
+                bibliotheque.livre[nbrLivres].parution <- nvParution
+                bibliotheque.livre[nbrLivres].nbrPages <- nvPages
+            
+                bibliotheque.nbrLivres <- bibliotheque.nbrLivres + 1
+
+            Fin si
+            
+            Afficher "Voulez vous ajouter un autre livre ? (o/n) :"
+            Saisir more
+            controle_yes_no( ; confirmation )
+            
+        Tant que (more = 'o')
+        
+    Fin si
+
+Fin AjouterLivre
+
+
+    

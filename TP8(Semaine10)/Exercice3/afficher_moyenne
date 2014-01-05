@@ -1,0 +1,29 @@
+procédure afficher_moyenne( tab_note[30][6] : entier, noms_eleves[30] : chaîne, nbr_note[30] : entier, nbr_eleve : entier)
+Début
+    Avec    numero, i : entier
+            total : réel
+	    nom : chaîne
+	    fonction rechercheTableau(tableau[] : chaîne, n : entier, recherche : chaîne) retourne entier
+
+    Afficher "Entrez le nom de l'élève : "
+    Saisir nom
+    Tant que (rechercheTableau(noms_eleves, nbr_eleve, nom) = -1) faire
+        Afficher "Erreur! Cet eleve n'existe pas"
+        A la ligne
+        Afficher "Entrez le nom de l'élève à nouveau : "
+        Saisir nom
+        A la ligne
+    fin faire
+    
+    nombre <- rechercheTableau(nom_eleves, nbr_eleve, nom)
+        
+    total <- 0
+    
+    Pour i de 0 à nbr_note[numero] - 1 faire
+        total <- total + tab_note[numero - 1][i]
+    fin faire
+    
+    Afficher "La moyenne de l'eleve ", nom ," est : ", total / nbr_note[numero]
+    A la ligne
+    
+fin afficher_moyenne

@@ -1,0 +1,22 @@
+fonction nbr_voyelles( mot : chaine ) retourne entier
+Début
+    Avec    nbr : entier
+            i, j : entier
+            voyelles : chaine
+            
+    voyelles <- "aeiouyAEIOUY"
+    nbr <- 0
+    
+    Pour i de 0 à longueur( mot ) - 1 faire
+        Pour j de 0 à 13 faire
+
+            Si ( mot[i] = voyelles[j] ) alors
+                nbr <- nbr + 1
+            Fin Si
+            
+        Fin faire
+    Fin faire
+    
+    retourne nbr
+    
+Fin nbr_voyelles

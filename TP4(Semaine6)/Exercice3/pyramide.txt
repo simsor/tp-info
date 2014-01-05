@@ -1,0 +1,15 @@
+programme pyramide
+début
+	avec hauteur : entier
+		procédure dessinePyramide( entier )
+		
+	afficher "Entrer la hauteur de la pyramide: "
+	saisir hauteur
+	
+	si (hauteur > 0) alors
+		dessinePyramide(hauteur)
+	sinon
+		afficher "La hauteur n'est pas valide (elle doit etre superieure a 0 !)"
+	fin si
+	
+fin pyramide

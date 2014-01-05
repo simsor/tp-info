@@ -1,0 +1,75 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de rechercher un livre 
+//  dans la bibliothèque
+//  Entrée: La bibliothèque
+//  Sortie: RIEN
+/////////////////////////////////////////////////////
+
+
+Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                                }
+
+procédure RechercherLivre( bibliotheque : t_biblio)
+Début
+    Avec    i : entier
+            selection : chaine
+            trouve : booléen
+            
+    trouve <- faux
+    
+    Si bibliotheque.nbrLivres = 0 alors
+
+        Afficher "Il n'y a pas encore de livres dans la bibliothèque..."
+        A la ligne
+        Afficher "Merci d'en ajouter."
+
+    Sinon
+            
+        Afficher "Quel livre rechercher vous (Titre) ? : "
+        Saisir selection
+    
+        i <- 0
+    
+        Repeter
+            Si (bibliotheque.livre[i].titre = selection) alors
+                Afficher "Le livre a bien ete trouve. Voici ses informations :"
+                A la ligne
+                trouve <- vrai
+
+                Afficher    "Titre : ", bibliotheque.livre[i].titre, "  ;  "
+                            "Auteur : ", bibliotheque.livre[i].auteur, "   ;  "
+                            "Date de parution : ", bibliotheque.livre[i].parution, "  ;  "
+                            "Nombre de pages : ", bibliotheque.livre[i].nbrPages, "\t"
+                        
+            Sinon
+        
+                i <- i + 1
+            
+            Fin si
+                        
+        Tant que i < bibliotheque.nbrLivres ou trouve = faux
+    
+        Si trouve alors
+            RIEN
+        Sinon
+        
+            Afficher "Ce livre n'est pas dans la bibliothèque..."
+        
+        Fin si
+        
+    Fin si
+    
+Fin RechercherLivre
+                        
+

@@ -1,0 +1,21 @@
+/////////////////////////////////////////
+// Procédure simulant un tirage d'allumettes par l'ordinateur.
+// ENTREE: le nombre d'allumettes restantes
+// SORTIE: le nombre d'allumettes après que l'ordinateur ait joué
+/////////////////////////////////////////
+
+Procédure Ordi_TirerAllumette ( ; allu : entier)
+Début
+	Avec tirer : entier
+
+	Si ( allu < 3) Alors
+	   tirer <- random() * (allu-1) + 1// Pour ne pas tirer plus d'allumettes que possible
+	Sinon
+	   tirer <- random() * 2 + 1
+	Fin si
+
+	Afficher "L'Ordinateur tire ", tirer, " allumette(s)."
+	A la ligne
+
+	allu = allu - tirer
+Fin Ordi_TirerAllumette

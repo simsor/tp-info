@@ -1,0 +1,46 @@
+Fonction verificationEns( bibliothèque : t_biblio )
+Début
+	Avec		ensemble : booléen
+			i, j : entier
+
+
+	ensemble <- vrai
+	i <- 0
+
+	Répéter
+
+	j <- i + 1
+
+		Répéter
+
+		Si ( bibliothèque.livre[i].titre = bibliothèque.livre[j].titre ) alors
+
+			Si ( bibliothèque.livre[i].auteur = bibliothèque.livre[j].auteur ) alors
+
+				Si ( bibliothèque.livre[i].parution = bibliothèque.livre[j].parution ) alors
+
+					Si ( bibliothèque.livre[i].nbrPages = bibliothèque.livre[j].nbrPages ) alors
+
+						ensemble <- faux
+
+					Fin si
+
+				Fin si
+
+			Fin si
+
+		Fin si
+
+		j <- j + 1
+
+		Tant que ( j < bibliothèque.nbrLivres et ensemble )
+
+	i <- i + 1
+
+	Tant que ( i < bibliothèque.nbrLivres et ensemble )
+    
+    retourne ensemble
+
+Fin verificationEns
+						
+			

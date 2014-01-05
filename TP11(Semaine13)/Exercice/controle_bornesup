@@ -1,0 +1,21 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de contrôler que la      
+//	valeur n entrée n'est pas supérieur à une
+//  certaine borne			   
+//  Entrée: le nombre n entré et la borne_sup déjà
+//  définie		   
+//  Sortie: un nombre valide (inférieur à borne_sup)					   
+/////////////////////////////////////////////////////
+
+procedure controle_bornesup(borne_sup : entier ;n : entier)	
+Début
+
+	Tant que ( borne_sup < n) faire
+		Afficher "Erreur, votre nombre choisi ne doit pas etre superieur a " , borne_sup , "."
+		A la ligne
+		Afficher "Entrer votre essai a nouveau : "
+		Saisir n
+		A la ligne
+	fin faire
+	
+Fin controle_bornesup

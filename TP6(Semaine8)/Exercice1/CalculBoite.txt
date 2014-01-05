@@ -1,0 +1,28 @@
+/////////////////////////////////////////
+//	Procedure qui calcul le nombre de
+//	boite necessaire pour un nombre 
+//	d'objet
+//
+//	Entree: le nombre d'objet a trier
+//	Sortie: RIEN
+/////////////////////////////////////////
+
+
+procedure CalculBoite( objet : entier)
+Debut
+	Avec Box1, Box2, Box3: entier
+	
+	Box1 <- objet / 200
+	Box2 <- (objet mod 200) / 50
+	Box3 <- ((objet mod 200) mod 50) / 10
+	
+	Afficher Box1, "emballage(s) de 200 ampoules."
+	A la ligne
+	
+	Afficher Box2, "emballage(s) de 50 ampoules."
+	A la ligne
+	
+	Afficher Box3, "emballage(s) de 10 ampoules."
+	A la ligne
+	
+Fin CalculBoite

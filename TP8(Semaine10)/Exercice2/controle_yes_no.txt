@@ -1,0 +1,22 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant de contrôler une réponse
+//	de l'utilisateur (oui ou non)		   
+//  Entrée: le nombre n entré et la borne_sup déjà
+//  définie		   
+//  Sortie: RIEN							   
+/////////////////////////////////////////////////////
+
+procedure controle_yes_no(; reponse : caractre)	
+Début
+
+	Tant que ( reponse != 'o' et reponse != 'n') faire
+	
+		Afficher "Mauvaise reponse entree..."
+		A la ligne
+		Afficher "Re-entrer votre reponse (o/n): "
+		Saisir reponse
+		A la ligne
+		
+	fin faire
+
+fin controle_mode

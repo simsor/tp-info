@@ -1,0 +1,77 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant d'Afficher le Menu d'une
+//  bibliothèque
+//  Entrée: La bibliothèque
+//  Sortie: La bibliothèque
+/////////////////////////////////////////////////////
+
+
+Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                                }
+                           
+
+procédure AfficherMenu(; bibliotheque : t_biblio )
+Début
+    Avec    choix : entier
+            ensemble : boolèen
+    
+            procédure AfficherBibli( bibliotheque : t_biblio)
+            procédure AjouterLivre( ; bibliotheque : t_biblio)
+            procédure SupLivre( ; bibliotheque : t_biblio)
+            procédure RechercherLivre( bibliotheque : t_biblio)
+            fonction vérificationEns( bibliothèque : t_biblio ) retourne boolèen
+    
+    
+    
+    Répéter
+        Afficher "////// MENU \\\\\\"
+        A la ligne
+        Afficher "1 - Afficher l'ensemble de la bibliothèque."
+        A la ligne
+        Afficher "2 - Ajouter un nouveau livre."
+        A la ligne
+        Afficher "3 - Supprimer un livre."
+        A la ligne
+        Afficher "4 - Rechercher un livre (par titre)."
+        A la ligne
+        Afficher "5 - Vérifier que la bibliothèque est un ensemble."
+        A la ligne
+        Afficher "6 - Quitter"
+        A la ligne
+        
+        Afficher "Entrer votre choix : "
+        Saisir choix
+        A la ligne
+        
+        Selon choix faire
+            cas 1 : AfficherBibli(bibliotheque )
+            cas 2 : AjouterLivre(; bibliotheque )
+            cas 3 : SupLivre(; bibliotheque )
+            cas 4 : RechercherLivre( bibliotheque )
+            cas 6 : ensemble <- vérificationEns( bibliothèque )
+                    Si ensemble alors
+                        Afficher "La bibliothèque est bien un ensemble."
+                    Sinon
+                        Afficher "La bibliothèque n'est pas un ensemble."
+                    Fin si
+
+            cas 5 : RIEN
+            defaut : "Erreur de saisie..."
+        fin faire
+        
+    Tant que (choix != 5)
+    
+    Afficher "Au revoir..."
+    
+Fin AfficherMenu

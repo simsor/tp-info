@@ -1,0 +1,16 @@
+programme devinette
+début
+	avec n, choisi, coups : entier
+	     procédure DemanderNombre(choisi : entier, coups : entier ; n : entier)
+
+	choisi <- random() * 100
+	coups <- 1
+
+	répéter
+		DemanderNombre(choisi, coups ; n)
+		
+		coups <- coups + 1
+
+	tant que (n >= 0)
+
+fin devinette

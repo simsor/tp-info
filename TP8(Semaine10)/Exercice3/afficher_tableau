@@ -1,0 +1,19 @@
+procédure afficher_tableau( tab_note[30][7] : entier, noms_eleves[30] : chaîne, nbr_note[30] : entier, nbr_eleve : entier)
+Début
+    Avec i, j : entier
+    
+    Pour i de 0 à nbr_eleve - 1 faire
+        Pour j de 0 à nbr_note[i] - 1 faire
+	     Si (j = 0) Alors
+	     	// On affiche le nom de l'élève plutôt que son ID
+		Afficher noms_eleves[i], "\t"
+	     Sinon
+		Afficher tab_note[i][j], "\t"
+	     Fin si
+        fin faire
+        A la ligne
+        
+    Fin faire
+    
+fin afficher_tableau
+    

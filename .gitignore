@@ -11,3 +11,36 @@
 *.lai
 *.la
 *.a
+
+# Emacs backup files
+*~
+
+# Eclipse things
+.metadata
+Makefile
+.cproject
+.project
+Debug
+Release
+*vcproj*
+*.ncb
+*.sln
+*.suo
+
+# compte-rendus et fichiers 
+*.odt?
+*.pdf?
+*.odt
+*.pdf
+*.docx
+*.png
+*.sh
+*.zip
+Rendu
+rendu
+Output
+Sources
+
+# OSX Stuff
+.DS_Store
+__MACOSX

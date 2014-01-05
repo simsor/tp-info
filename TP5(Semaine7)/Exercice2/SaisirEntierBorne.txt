@@ -1,0 +1,10 @@
+fonction SaisirEntierBorne (max : entier) retourne entier
+début
+	avec n : entier
+
+	répéter
+		saisir n
+	tant que n > max
+
+	retourner n
+fin SaisirEntierBorne

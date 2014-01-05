@@ -1,0 +1,14 @@
+procédure afficher_tableau( tab_note[30][7] : entier, nbr_note[30] : entier, nbr_eleve : entier)
+Début
+    Avec i, j : entier
+    
+    Pour i de 0 à nbr_eleve - 1 faire
+        Pour j de 0 à nbr_note[i] - 1 faire
+            Afficher tab_note[i][j], "\t"
+        fin faire
+        A la ligne
+        
+    Fin faire
+    
+fin afficher_tableau
+    

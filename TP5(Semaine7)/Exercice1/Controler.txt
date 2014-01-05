@@ -1,0 +1,11 @@
+procedure controler(;n : entier)	
+Début
+
+	Tant que (n<2) faire
+		Afficher "Erreur n doit etre supérieur a 1."
+		A la ligne
+		Afficher "Entrer n a nouveau : "
+		Saisir n
+	fin faire
+	
+Fin controler

@@ -1,0 +1,26 @@
+Programme Livre
+Début
+    Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                                }
+                           
+            bibliotheque : t_biblio
+            procédure AfficherMenu(; bibliotheque : t_biblio)
+            
+            bibliotheque.nbrLivres <- 0
+            
+            AfficherMenu( ; bibliotheque )
+            
+Fin Livre
+            
+            

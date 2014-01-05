@@ -1,0 +1,44 @@
+/////////////////////////////////////////////////////
+//  Procédure permettant d'Afficher l'ensemble de 
+//  la bibliothéque
+//  Entrée: La bibliothèque
+//  Sortie: RIEN
+/////////////////////////////////////////////////////
+
+
+Avec    type t_livre = {
+                            titre : chaine
+                            auteur : chaine
+                            parution : entier
+                            nbrPages : entier
+                            
+                           }
+                           
+            type t_biblio = {
+                                livre[500] : t_livre
+                                nbrLivres : entier
+
+                           }
+
+procédure AfficherBibli( bibliotheque : t_biblio )
+Début
+    Avec    i : entier
+            
+    Si bibliotheque.nbrLivres = 0 alors
+
+        Afficher "Il n'y a pas encore de livres dans la bibliothèque..."
+        A la ligne
+        Afficher "Merci d'en ajouter."
+        
+    Sinon
+    
+        Pour i de 0 à bibliotheque.nbrLivres - 1 faire
+            Afficher    "Titre : ", bibliotheque.livre[i].titre, "  ;  "
+                        "Auteur : ", bibliotheque.livre[i].auteur, "   ;  "
+                        "Date de parution : ", bibliotheque.livre[i].parution, "  ;  "
+                        "Nombre de pages : ", bibliotheque.livre[i].nbrPages, "\t"
+        Fin faire
+        
+    Fin si
+    
+Fin AfficherBibli

@@ -1,0 +1,11 @@
+fonction factoriel (n : entier) retourne entier
+début
+	avec res, i : entier
+	
+	res <- 1
+	pour i de 1 à n faire
+		res <- i * res
+	fin faire
+	
+	retourne res
+fin factoriel

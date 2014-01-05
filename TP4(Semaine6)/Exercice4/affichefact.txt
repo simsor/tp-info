@@ -1,0 +1,23 @@
+programme afficheFact
+début
+	avec n : entier
+		encore : caractère
+		fonction factoriel (entier) retourne entier
+	
+	répéter
+		si encore = 'o' alors
+			afficher "Entrer un entier: "
+			saisir n
+			si (n > 0) alors
+				afficher n, "! = ", factoriel(n)
+			sinon
+				afficher "Le nombre doit etre positif."
+			fin si
+		fin si
+		
+		afficher "Encore ? "
+		saisir encore
+	tant que encore = 'o'
+	
+	à la ligne
+fin afficheFact
